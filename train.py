@@ -48,6 +48,7 @@ def main():
     mlflow.set_experiment('iris-lightgbm')
     mlflow.lightgbm.autolog()
 
+    print('Find your training run at https://github.com/gojira/act1/runs/1485738480418041410')
     # train model
     params = {
         'objective': 'multiclass',
