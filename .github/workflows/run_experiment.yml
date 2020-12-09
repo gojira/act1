@@ -12,6 +12,10 @@ jobs:
       uses: actions/setup-python@v2.1.4
       with:
         python-version: 3.8
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Train
       env:
         MLFLOW_TRACKING_URI: azureml://eastus2.experiments.azureml.net/mlflow/v1.0/subscriptions/92c76a2f-0e1c-4216-b65e-abf7a3f34c1e/resourceGroups/keijik-east/providers/Microsoft.MachineLearningServices/workspaces/keijik-east2
